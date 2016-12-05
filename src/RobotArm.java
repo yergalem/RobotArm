@@ -70,34 +70,34 @@ public class RobotArm {
     }
 
     /**
-     * This method should fill up the location with the given content depending on the 'OrderingStrategy'.
+     * This method should fill up the location with the given content depending on the 'FillingStrategy'.
      *
-     * If the ordering strategy is ROW_WISE you should start with the first available space in the top left location
+     * If the filling strategy is ROW_WISE you should start with the first available space in the top left location
      * and fill up every column until the current row is filled. Then move to the next row.
      *
-     * If the ordering strategy is COLUMN_WISE you should start by filling it column whise, meaning take the first
+     * If the filling strategy is COLUMN_WISE you should start by filling it column whise, meaning take the first
      * column and place an item in each row until the column is filled.
      *
      *
-     * @param contents
-     * @param strategy
+     * @param contents list of items to be inserted into the location
+     * @param strategy the strategy of how the location should be filled up
      * @throws SomethingWentWrongException
      */
 
-    public void fillLocationWithItems(List<Content> contents, OrderingStrategy strategy) throws SomethingWentWrongException {
+    public void fillLocationWithItems(List<Content> contents, FillingStrategy strategy) throws SomethingWentWrongException {
         throw new UnsupportedOperationException();
     }
 
     /**
-     * This method should reorder all the items currently stored in the location. The ordering is either column wise or
-     * row wise, depending what type of 'OrderingStrategy' was passed as a parameter.
+     * This method should reorder all the items currently stored in the location. The filling is either column wise or
+     * row wise, depending what type of 'FillingStrategy' was passed as a parameter.
      *
      * The order should be the volume of the content in a decreasing order (highest volume first), if two contents have
      * the same volume order them alphabetically after their barcode.
      *
      * @param strategy The strategy how the items should be recorded (row or column wise)
      */
-    public void reorder(OrderingStrategy strategy) {
+    public void reorder(FillingStrategy strategy) {
         throw new UnsupportedOperationException();
     }
 
