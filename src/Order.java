@@ -1,12 +1,15 @@
 import java.util.List;
 
-/**
- * Created by roger on 05.12.16.
- */
+
 public class Order {
     private List<String> itemBarcodesUsed;
     private Integer price;
 
+    /**
+     * Constructor to build an order
+     * @param itemBarcodesUsed used to idenify what content was used to fulfil the order
+     * @param price total price for the order
+     */
     public Order(List<String> itemBarcodesUsed, Integer price) {
         this.itemBarcodesUsed = itemBarcodesUsed;
         this.price = price;

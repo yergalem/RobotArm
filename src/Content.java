@@ -1,17 +1,25 @@
-/**
- * Created by roger on 02.12.16.
- */
-public class Item {
+
+
+public class Content {
 
     private String barcode;
     private String name;
     private char symbol;
     private Integer volume;
     private Integer price;
-    private ItemType type;
+    private ContentType type;
 
 
-    public Item(String barcode, String name, char symbol, Integer volume, Integer price, ItemType type) {
+    /**
+     * Constructor for a content which gets stored in the freezer
+     * @param barcode barcode used for the content, usually printed on the tube and can be used with barcode scanners
+     * @param name name given to the content, human readable
+     * @param symbol abbreviation of a single character to represent the content (useful for console printing as example)
+     * @param volume volume of liquid contained in the content
+     * @param price price for the content, this is the total price for the current volume beeing stored, not the price per volume
+     * @param type the type this content can be classified as
+     */
+    public Content(String barcode, String name, char symbol, Integer volume, Integer price, ContentType type) {
         this.barcode = barcode;
         this.name = name;
         this.symbol = symbol;
@@ -52,11 +60,11 @@ public class Item {
         this.symbol = symbol;
     }
 
-    public ItemType getType() {
+    public ContentType getType() {
         return type;
     }
 
-    public void setType(ItemType type) {
+    public void setType(ContentType type) {
         this.type = type;
     }
 
