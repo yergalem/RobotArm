@@ -1,21 +1,21 @@
 import java.util.*;
 
 /**
- * You task is to implement the RobotArm API which consists of the methods given below.
+ * Your task is to implement the RobotArm API which consists of the methods given below.
  *
- * You are free to choose how you implement it, from the way you store the content to be retrieved afterwards.
+ * You are free to choose how you implement it, from the way you store the content to the way it will be retrieved afterwards.
  * Feel free to add any properties or auxiliary methods as you see fit. The only requirement is that you do not
  * modify the given API methods and return the correct items.
  *
- * Handle anything that fails with the same type of exceptioin 'SomethingWentWrongException' and add a reasonable
+ * Handle anything that fails with the same type of exception 'SomethingWentWrongException' and add a reasonable
  * description of what went wrong.
  */
 
 public class RobotArm {
 
     /**
-     * Constructor for the RobotArm, it takes the size  of the location the robot will interact with. Each location can
-     * be thought of as a matrix of locations, each location is a rectangle in size and will always contain the same number
+     * Constructor for the RobotArm, it takes the size of the location the robot will interact with. Each location can
+     * be thought of as a matrix of sub-locations, each location is a rectangle in size and will always contain the same number
      * of columns per row
      * @param numberOfRows number of rows present in the location
      * @param numberOfColumns number of columns of the location
@@ -26,10 +26,10 @@ public class RobotArm {
 
 
     /**
-     * Stores an item at the specified location (row and column)
+     * Stores a content at the specified location (row and column)
      * @param content Content which should be stored in the location
-     * @param row the row the item should be stored at
-     * @param column the column the item should be stored at
+     * @param row the row the content should be stored at
+     * @param column the column the content should be stored at
      * @throws SomethingWentWrongException
      */
     public void storeItemAtLocation(Content content, Integer row, Integer column) throws SomethingWentWrongException {
@@ -37,11 +37,11 @@ public class RobotArm {
     }
 
     /**
-     * Retrieves the content previously stored at the given row and column. The item should not be present in the
+     * Retrieves the content previously stored at the given row and column. The content should not be present in the
      * location after it has been retrieved
      *
-     * @param row the row the item is currently located
-     * @param column the column the item is currently located
+     * @param row the row the content is currently located
+     * @param column the column the content is currently located
      * @return
      * @throws SomethingWentWrongException if anything goes wrong during the retrieval throw this exception with a
      * clear reason why this exception was thrown
@@ -58,7 +58,8 @@ public class RobotArm {
     }
 
     /**
-     * Should retrieve the content with the given barcode. You are allowed to assume that barcodes will be unique.
+     * Should retrieve the content with the given barcode. You are allowed to assume that barcodes will be unique. The content should not be present in the
+     * location after it has been retrieved
      *
      * @param barcode the barcode for the sample
      * @return
@@ -70,16 +71,16 @@ public class RobotArm {
     }
 
     /**
-     * This method should fill up the location with the given content depending on the 'FillingStrategy'.
+     * This method should fill up the location with the given contents depending on the 'FillingStrategy'.
      *
      * If the filling strategy is ROW_WISE you should start with the first available space in the top left location
      * and fill up every column until the current row is filled. Then move to the next row.
      *
-     * If the filling strategy is COLUMN_WISE you should start by filling it column whise, meaning take the first
+     * If the filling strategy is COLUMN_WISE you should start by filling it column wise, meaning take the first
      * column and place an item in each row until the column is filled.
      *
      *
-     * @param contents list of items to be inserted into the location
+     * @param contents list of contents to be inserted into the location
      * @param strategy the strategy of how the location should be filled up
      * @throws SomethingWentWrongException
      */
@@ -89,7 +90,7 @@ public class RobotArm {
     }
 
     /**
-     * This method should reorder all the items currently stored in the location. The filling is either column wise or
+     * This method should reorder all the contents currently stored in the location. The filling is either column wise or
      * row wise, depending what type of 'FillingStrategy' was passed as a parameter.
      *
      * The order should be the volume of the content in a decreasing order (highest volume first), if two contents have
