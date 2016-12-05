@@ -17,16 +17,15 @@ Now hurry the demo is coming up soon and the whole team is counting on you!
 
 
 ##How to get started
-Import the project into eclipse (you can use any other IDE of your choosing but only for eclipse we will provide)
-a step by step instruction:
+Import the project into eclipse (you can use any other IDE of your choosing but only for eclipse 
+we will provide a step by step instruction):
 
 - Download eclipse for your current operating system: https://www.eclipse.org/downloads/
 - Be sure to have the java SDK installed: http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html
-- Be sure to have git installed (on windows be sure to use git-bash, git from eclipse will not work): https://git-scm.com/downloads
 - Open eclipse
 - Go to your workbench
 - Go to: File -> New -> Java Project
-- Enter you prefered project name, e.g. RobotArm
+- Enter you preferred project name, e.g. RobotArm
 - Click on Browse and select the location you cloned your repository to, click open
 - Click Finish
 - Go into the RobotArm -> src folder
