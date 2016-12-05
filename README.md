@@ -20,8 +20,18 @@ Now hurry the demo is coming up soon and the whole team is counting on you!
 Import the project into eclipse (you can use any other IDE of your choosing but only for eclipse we will provide)
 a step by step instruction:
 
-1. Download eclipse for your current operating system: https://www.eclipse.org/downloads/
-2. Be sure to have the java SDK installed: http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html
-3. Be sure to have git installed: https://git-scm.com/downloads 
-    (on windows be sure to use git-bash, git from eclipse will not work)
-4. 
+- Download eclipse for your current operating system: https://www.eclipse.org/downloads/
+- Be sure to have the java SDK installed: http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html
+- Be sure to have git installed (on windows be sure to use git-bash, git from eclipse will not work): https://git-scm.com/downloads
+- Open eclipse
+- Go to your workbench
+- Go to: File -> New -> Java Project
+- Enter you prefered project name, e.g. RobotArm
+- Click on Browse and select the location you cloned your repository to, click open
+- Click Finish
+- Go into the RobotArm -> src folder
+- Right click on the Main.java file
+- Select 'Run As' -> 'Java Application'
+
+
+This should be enough to get you started, now go ahead and implement these methods!
