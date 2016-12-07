@@ -6,7 +6,7 @@ public class Content {
     private String name;
     private char symbol;
     private Integer volume;
-    private Integer price;
+    private Double price;
     private ContentType type;
 
 
@@ -16,10 +16,10 @@ public class Content {
      * @param name name given to the content, human readable
      * @param symbol abbreviation of a single character to represent the content (useful for console printing as example)
      * @param volume volume of liquid contained in the content
-     * @param price price for the content, this is the total price for the current volume beeing stored, not the price per volume
+     * @param price price for the content, this is the total price for the current volume being stored, not the price per volume
      * @param type the type this content can be classified as
      */
-    public Content(String barcode, String name, char symbol, Integer volume, Integer price, ContentType type) {
+    public Content(String barcode, String name, char symbol, Integer volume, Double price, ContentType type) {
         this.barcode = barcode;
         this.name = name;
         this.symbol = symbol;
@@ -68,11 +68,11 @@ public class Content {
         this.type = type;
     }
 
-    public Integer getPrice() {
+    public Double getPrice() {
         return price;
     }
 
-    public void setPrice(Integer price) {
+    public void setPrice(Double price) {
         this.price = price;
     }
 }

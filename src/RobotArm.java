@@ -13,6 +13,8 @@ import java.util.*;
 
 public class RobotArm {
 
+    private List<List<Content>> freezer;
+
     /**
      * Constructor for the RobotArm, it takes the size of the location the robot will interact with. Each location can
      * be thought of as a matrix where each cell can contain a content, each location is a rectangle in size and will always contain the same number
@@ -35,6 +37,7 @@ public class RobotArm {
     public void storeItemAtLocation(Content content, Integer row, Integer column) throws SomethingWentWrongException {
         throw new UnsupportedOperationException();
     }
+
 
     /**
      * Retrieves the content previously stored at the given row and column. The content should not be present in the
@@ -104,9 +107,15 @@ public class RobotArm {
 
 
     /**
-     * This method should gather the given volume of the type defined by 'ContentType'. The aim is to minimize the
-     * cost of the required volume. The deducted volume of each content to fulfill the order should be directly deducted
-     * from each content used. If the given volume can't be retrieved due to the lack of content of the given type,
+     * This method will be used when the lab receives an order. A customer might request to the lab to deliver a
+     * certain volume of a specified 'ContentType'. The robot should be able to retrieve the required volume from
+     * the location and this method should find the minimal cost to the lab which will fulfil the order.
+     *
+     * Even 'Content' of the same 'ContentType' might have different prices inside the location. To collect the
+     * required volume, deduct it from each 'Content' you used to fulfil the order (again try to minimize the total
+     * cost).
+     *
+     * If the given volume can't be retrieved due to the lack of content of the given type,
      * nothing should be deducted from any item.
      *
      * Therefore this method should only modify any content in the location if enough volume is present of the specified
@@ -117,14 +126,15 @@ public class RobotArm {
      * The order returned should account for any content used (through its barcode) even if the content was only
      * partially used in that order.
      *
+     * Even if all the volume of a 'Content' is used for an order you do not need to remove it from the location.
+     *
      * @param volume
      * @param type
      * @return
      * @throws SomethingWentWrongException
      */
-    public Order minimalCostForVolumeAndType(Integer volume, ContentType type) throws SomethingWentWrongException {
+    public Order fulfilOrderWithMinimalCostForVolumeAndType(Integer volume, ContentType type) throws SomethingWentWrongException {
         throw new UnsupportedOperationException();
-
     }
 
 
