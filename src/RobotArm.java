@@ -18,7 +18,10 @@ public class RobotArm {
     /**
      * Constructor for the RobotArm, it takes the size of the location the robot will interact with. Each location can
      * be thought of as a matrix where each cell can contain a content, each location is a rectangle in size and will always contain the same number
-     * of columns per row
+     * of columns per row.
+     *
+     * The top left cell should be at index (0,0)
+     *
      * @param numberOfRows number of rows present in the location
      * @param numberOfColumns number of columns of the location
      */
