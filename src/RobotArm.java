@@ -13,8 +13,6 @@ import java.util.*;
 
 public class RobotArm {
 
-    private List<List<Content>> freezer;
-
     /**
      * Constructor for the RobotArm, it takes the size of the location the robot will interact with. Each location can
      * be thought of as a matrix where each cell can contain a content, each location is a rectangle in size and will always contain the same number
