@@ -1,6 +1,6 @@
-#Coding Exercise
+# Coding Exercise
 
-##Scenario
+## Scenario
 
 Genohm is in great distress. We have a client demo coming up, but the Robot equipment we bought to show the 
 integration with the Robot Arm (often used by Biobanks) just malfunctioned and a replacement will arrive too late.
@@ -16,7 +16,7 @@ the demo will be able to be shown smoothly.
 Now hurry the demo is coming up soon and the whole team is counting on you!
 
 
-##How to get started
+## How to get started
 Import the project into eclipse (you can use any other IDE of your choosing but only for eclipse 
 we will provide a step by step instruction):
 
@@ -34,3 +34,13 @@ we will provide a step by step instruction):
 
 
 This should be enough to get you started, now go ahead and implement these methods!
+
+
+## After you finish
+
+When you are done you can make a commit (and push it to us in a slightly strange manner) 
+ - git add .
+ - git commit -m "My commit"
+ - git push origin HEAD:refs/for/master
+ 
+Also drop us an email when you're done.
