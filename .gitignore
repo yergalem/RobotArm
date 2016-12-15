@@ -46,3 +46,4 @@ fabric.properties
 .project
 *.iml
 *.DS_Store
+/bin/

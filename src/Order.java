@@ -52,4 +52,12 @@ public class Order {
     public void setVolume(Integer volume) {
         this.volume = volume;
     }
+
+	@Override
+	public String toString() {
+		return "Order [contentBarcodesUsed=" + contentBarcodesUsed + ", price=" + price + ", volume=" + volume
+				+ ", contentType=" + contentType + "]";
+	}
+    
+    
 }
